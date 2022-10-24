@@ -10,6 +10,12 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+@import url("https://fonts.googleapis.com/css?family=PT+Mono:regular&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:regular,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -411,7 +417,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -610,9 +616,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .btn {
@@ -754,6 +760,95 @@ button,
   pointer-events: auto;
 }
 
+.header {
+  position: sticky;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  height: 120px;
+  background-color: #041827;
+  color: #F2F5F6;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.header__contacts {
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 150px;
+  -moz-column-gap: 150px;
+  column-gap: 150px;
+}
+
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: inherit;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__link:hover {
+  color: #00B2FF;
+}
+
+.header__link:hover svg {
+  fill: #ffffff;
+}
+
+.header__link svg {
+  width: 20px;
+  height: 20px;
+  fill: #00B2FF;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__button {
+  margin-left: auto;
+  margin-right: 62px;
+  padding: 11px 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #F2F5F6;
+  background-color: transparent;
+  border: 1px solid #F2F5F6;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__button:hover {
+  color: #00B2FF;
+  border-color: #00B2FF;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -804,6 +899,17 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+
+  .header__contacts {
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    margin-left: auto;
+  }
+
+  .header__link span {
+    display: none;
   }
 }
 
