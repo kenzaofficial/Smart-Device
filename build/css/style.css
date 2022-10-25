@@ -781,7 +781,7 @@ button,
 }
 
 .header__contacts {
-  margin-left: 40px;
+  margin-left: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -905,7 +905,6 @@ button,
     -webkit-column-gap: 50px;
     -moz-column-gap: 50px;
     column-gap: 50px;
-    margin-left: auto;
   }
 
   .header__link span {
