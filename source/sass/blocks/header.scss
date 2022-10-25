@@ -13,19 +13,14 @@
   flex-wrap: wrap;
 }
 
-.header__logo {}
-
-.logo {}
-
 .header__contacts {
-  margin-left: 40px;
+  margin-left: 140px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 150px;
 
   @include vp-1023 {
     column-gap: 50px;
-    margin-left: auto;
   }
 }
 
@@ -51,15 +46,12 @@
   }
 }
 
-
 .header__link svg {
   width: 20px;
   height: 20px;
   fill: $fill-icon;
   transition: .3s;
 }
-
-.button {}
 
 .header__button {
   margin-left: auto;
