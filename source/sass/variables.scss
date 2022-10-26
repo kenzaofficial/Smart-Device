@@ -12,10 +12,14 @@ $color-transparent: rgba(255, 255, 255, 0);
 
 $color-deepsky-blue: #00B2FF;
 $color-black-pearl: #041827;
-$color-main-text: #F2F5F6;
+$color-text-light: #F2F5F6;
+$color-text-dark: $color-black-pearl;
+$color-alice: #f8fdff;
+
+
 $fill-icon: $color-deepsky-blue;
-$color-background-button-hero: $color-deepsky-blue;
-$color-background-section: $color-black-pearl;
+$color-bg-darkblue: $color-black-pearl;
+$color-bg-light: $color-alice;
 
 
 
