@@ -618,7 +618,7 @@ button,
   width: 100%;
   max-width: 1260px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .btn {
@@ -626,7 +626,14 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
-  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  border-radius: 3px;
+  color: #F2F5F6;
   background-color: #2c39f2;
   border: none;
   cursor: pointer;
@@ -761,12 +768,13 @@ button,
 }
 
 .header {
-  position: sticky;
-  padding: 30px 0 25px;
-  min-height: 120px;
+  position: fixed;
+  padding: 20px 0 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 120px;
+  width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -787,7 +795,7 @@ button,
 }
 
 .header__contacts {
-  margin-left: auto;
+  margin: 0 auto;
   padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -797,6 +805,7 @@ button,
   -webkit-column-gap: 50px;
   -moz-column-gap: 50px;
   column-gap: 50px;
+  max-width: 100%;
 }
 
 .header__link {
@@ -820,7 +829,7 @@ button,
 }
 
 .header__link:hover svg {
-  fill: #ffffff;
+  fill: #F2F5F6;
 }
 
 .header__link svg {
@@ -833,18 +842,12 @@ button,
 }
 
 .header__btn {
-  margin-left: auto;
-  margin-right: 62px;
+  margin-right: 50px;
   padding: 11px 15px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  color: #F2F5F6;
+  min-height: 40px;
   background-color: transparent;
   border: 1px solid #F2F5F6;
   text-transform: uppercase;
-  border-radius: 3px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -857,24 +860,13 @@ button,
 }
 
 .hero {
-  position: relative;
-  padding-top: 185px;
-  margin-top: -20px;
-  background: url(../../img/background-desktop.jpg) center/cover no-repeat;
-  height: 100vh;
+  padding-top: 305px;
+  padding-bottom: 280px;
+  background-color: #041827;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url(../../img/background-desktop.jpg) center/cover no-repeat;
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url(../../img/background-desktop.jpg) center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url(../../img/background-desktop.jpg) center/cover no-repeat;
   color: #F2F5F6;
-}
-
-.hero::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 }
 
 .hero__container {
@@ -887,36 +879,150 @@ button,
   flex-direction: column;
 }
 
-.hero__body {
-  position: relative;
+.hero__content {
   padding-left: 130px;
 }
 
-.hero__title {
-  margin: 0 0 40px 0;
+.hero__content h2 {
+  margin: 0 0 30px 0;
   font-family: "Roboto Condensed";
   font-size: 80px;
-  line-height: 93px;
+  line-height: 94px;
   text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
-.hero__sub-title {
-  margin: 0 0 55px 0;
+.hero__content p {
+  margin-bottom: 50px;
   max-width: 700px;
   font-size: 22px;
   line-height: 34px;
 }
 
 .hero__btn {
-  font-family: "Roboto Condensed", sans-serif;
   padding: 17px;
+  min-height: 55px;
   font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
   line-height: 21px;
-  color: #ffffff;
   background-color: #00B2FF;
-  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.advantages {
+  color: #F2F5F6;
+  padding: 120px 0;
+  background-color: #f8fdff;
+}
+
+.advantages__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.item-advantage {
+  padding: 40px 45px 35px;
+  max-width: 595px;
+  min-height: 300px;
+  border: 1px solid #EBEBEB;
+  border-left: 5px solid #00B2FF;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.item-advantage:hover {
+  background-color: #00B2FF;
+}
+
+.item-advantage:hover svg {
+  fill: #f8fdff;
+}
+
+.item-advantage:hover h3 {
+  color: #F2F5F6;
+}
+
+.item-advantage:hover p {
+  color: #f8fdff;
+}
+
+.item-advantage svg {
+  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
+  fill: #00B2FF;
+}
+
+.item-advantage h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00B2FF;
+}
+
+.item-advantage p {
+  margin-top: 0;
+  line-height: 22px;
+  color: #041827;
+}
+
+.about__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__container::before {
+  position: absolute;
+  top: 50px;
+  left: -40px;
+  content: "2023";
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 156px;
+  font-weight: 700;
+  line-height: 220px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background: #041827 url(../../img/about-bg.png) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about__text {
+  padding-left: 255px;
+  padding-bottom: 20px;
+  color: #041827;
+}
+
+.about__text h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+}
+
+.about__text p {
+  margin-top: 0;
+}
+
+.about__btn {
+  margin-top: 15px;
+  padding: 13px 30px;
+  min-height: 45px;
+  background-color: transparent;
+  color: #00B2FF;
+  border: 1px solid #00B2FF;
   text-transform: uppercase;
 }
 
@@ -997,21 +1103,39 @@ button,
   }
 
   .hero {
-    padding-top: 100px;
+    padding-top: 180px;
+    padding-bottom: 205px;
   }
 
-  .hero__body {
+  .hero__content {
     padding-left: 0;
   }
 
-  .hero__title {
+  .hero__content h2 {
     margin-bottom: 0;
     font-size: 64px;
     line-height: 75px;
   }
 
+  .hero__content p {
+    margin-top: 0;
+    margin-bottom: 55px;
+  }
+
   .hero__btn {
     margin-left: 50px;
+  }
+
+  .advantages {
+    padding: 80px 0;
+  }
+
+  .item-advantage {
+    min-height: 360px;
+  }
+
+  .item-advantage h3 {
+    margin-bottom: 10px;
   }
 }
 

@@ -1,11 +1,12 @@
 .header {
-  position: sticky;
-  padding: 30px 0 25px;
-  min-height: 120px;
+  position: fixed;
+  padding: 20px 0 25px;
   display: flex;
+  min-height: 120px;
+  width: 100%;
   align-items: center;
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  color: $color-main-text;
+  background: linear-gradient(180deg, $color-bg-darkblue 84.9%, rgba(4, 24, 39, 0) 100%);
+  color: $color-text-light;
   z-index: 2;
 
   @include vp-1023 {
@@ -20,11 +21,12 @@
 }
 
 .header__contacts {
-  margin-left: auto;
+  margin: 0 auto;
   padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 50px;
+  max-width: 100%;
 
   @include vp-1023 {
     margin-right: 20px;
@@ -43,7 +45,7 @@
     color: $color-deepsky-blue;
 
     svg {
-      fill: $color-default-white;
+      fill: $color-text-light;
     }
   }
 
@@ -64,18 +66,12 @@
 }
 
 .header__btn {
-  margin-left: auto;
-  margin-right: 62px;
+  margin-right: 50px;
   padding: 11px 15px;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  color: $color-main-text;
+  min-height: 40px;
   background-color: transparent;
-  border: 1px solid $color-main-text;
+  border: 1px solid $color-text-light;
   text-transform: uppercase;
-  border-radius: 3px;
   cursor: pointer;
   transition: .3s;
 

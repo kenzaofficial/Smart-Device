@@ -1,8 +1,15 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  border-radius: 3px;
 
-  color: $color-default-white;
+  color: $color-text-light;
 
   background-color: $color-neon-blue;
   border: none;
