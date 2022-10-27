@@ -1,4 +1,6 @@
-.about {}
+.about {
+  padding-bottom: 100px;
+}
 
 .about__container {
   position: relative;
@@ -10,9 +12,9 @@
     left: -40px;
     content: "2023";
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 156px;
+    font-size: 155px;
     font-weight: 700;
-    line-height: 220px;
+    line-height: 221px;
     transform: rotate(-90deg);
     background: $color-bg-darkblue url(../../img/about-bg.png) no-repeat;
     background-clip: text;
@@ -47,4 +49,10 @@
   color: $color-deepsky-blue;
   border: 1px solid $color-deepsky-blue;
   text-transform: uppercase;
+  transition: .3s;
+
+  &:hover {
+    color: $color-text-light;
+    background-color: $color-bg-darkblue;
+  }
 }
