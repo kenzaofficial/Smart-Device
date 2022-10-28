@@ -115,10 +115,36 @@
           </div>
         </div>
       </section>
-      <section class="feedback"></section>
+      <section class="feedback">
+        <div class="feedback__container container">
+          <div class="feedback__image">
+            <img src="img/feedback-plane.png" alt="paperplane">
+          </div>
+          <form action="https://echo.htmlacademy.ru/" method="get" class="feedback__form form">
+            <legend> Got any questions? Ask us!</legend>
+            <p>We will consult you for free</p>
+            <div class="form__content">
+              <div class="form__field">
+                <input id="user-name" type="text" required placeholder="Your name">
+              </div>
+              <div class="form__field">
+                <input id="user-tel" type="number" required placeholder="Your phone number">
+              </div>
+              <div class="form__field form__field--area">
+                <textarea id="question" placeholder="Type your question here."></textarea>
+              </div>
+            </div>
+            <div class="feedback__submit submit">
+              <button type="submit" class="submit__btn btn">Ask a question</button>
+              <input type="checkbox">
+            </div>
+          </form>
+
+        </div>
+      </section>
     </main>
     <footer>
-      <div class="container"></div>
+
     </footer>
   </div>
 
