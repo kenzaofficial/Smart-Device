@@ -1,7 +1,7 @@
 .feedback {
   padding: 170px 0 250px;
   color: $color-default-white;
-  background: linear-gradient(139deg, rgba(2, 102, 147, 1) 35%, $color-deepsky-blue 35%);
+  background: linear-gradient(139deg, rgba(2, 102, 147, 1) 34%, $color-deepsky-blue 34%);
 }
 
 .feedback__container {
@@ -10,7 +10,9 @@
 }
 
 
-.feedback__image {}
+.feedback__image {
+  margin-top: 80px;
+}
 
 .feedback__form {
   margin-left: auto;
@@ -37,8 +39,8 @@
   flex-wrap: wrap;
 }
 
-.feedback__form input,
-.feedback__form textarea {
+.form__content input,
+.form__content textarea {
   padding: 15px;
   width: 100%;
   color: $color-default-white;
@@ -51,6 +53,10 @@
   }
 }
 
+.form__content input {
+  min-height: 50px;
+}
+
 .feedback__form textarea {
   min-height: 155px;
 }
@@ -59,12 +65,16 @@
   flex: 1 1 auto;
 }
 
-.feedback__submit {}
+.form__submit {}
 
-.submit {}
+.submit {
+  display: flex;
+  column-gap: 50px;
+}
 
 
 .submit__btn {
+  display: flex;
   padding: 13px;
   max-width: 265px;
   width: 100%;
@@ -72,5 +82,11 @@
   line-height: 19px;
   letter-spacing: 0.05em;
   justify-content: center;
+  align-items: center;
   background-color: $color-btn-dark;
+}
+
+.submit__agreement {
+  display: flex;
+  align-items: center;
 }
