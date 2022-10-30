@@ -22,7 +22,7 @@
     width: 100%;
     font-size: 14px;
     line-height: 18px;
-    color: $color-pacific-blue;
+    color: $color-default-white;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -31,7 +31,7 @@
     .checkbox__icon {
 
       &::after {
-        border-color: $color-pacific-blue;
+        border-color: $color-default-white;
         opacity: 1;
       }
     }
@@ -45,7 +45,7 @@
     transform: translateY(-50%);
     width: 15px;
     height: 15px;
-    border: 1px solid $color-pacific-blue;
+    border: 1px solid $color-default-white;
     border-radius: 2px;
     z-index: 1;
     transition: .3s;

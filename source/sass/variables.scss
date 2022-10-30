@@ -12,8 +12,6 @@ $color-pacific-blue: #019BDF;
 $color-deepsky-blue: #00B2FF;
 $color-black-pearl: #041827;
 $color-alice: #f8fdff;
-
-
 $color-text-dark: $color-black-pearl;
 $fill-icon: $color-deepsky-blue;
 $color-bg-darkblue: $color-black-pearl;
@@ -34,6 +32,7 @@ $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0)
 
 // переменная используемая в html для подключения скейлинга
 $fz-default: 16px;
+
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13

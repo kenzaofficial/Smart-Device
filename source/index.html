@@ -12,10 +12,13 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="home">
       <div class="header__container container">
         <a class="header__logo logo">
-          <img src="img/logo.png" alt="Smart Device logo" width="215" height="50">
+          <picture>
+            <source media="(max-width:767px )" srcset="img/sprite/logo.svg">
+            <img src="img/logo.png" alt="Smart Device logo" width="215" height="55">
+          </picture>
         </a>
         <div class="header__contacts">
           <a class="header__link" href="mailto:someone@yoursite.com">
@@ -31,12 +34,12 @@
       </div>
     </header>
     <main class="main">
-      <h1 hidden>Smart Device</h1>
+      <h1 class="visually-hidden">Smart Device</h1>
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__content">
-            <h2 class="hero__title">printed boards</h2>
-            <p class="hero__sub-title">production and installation, supplying of components, blocks and modules</p>
+            <h2>printed boards</h2>
+            <p>production and installation, supplying of components, blocks and modules</p>
             <button class="btn hero__btn" type="button">Get a free consultation</button>
           </div>
         </div>
@@ -80,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container container">
           <div class="about__text">
             <h3>About company</h3>
@@ -88,10 +91,8 @@
               1997.
               Urgent orders and pilot terms of validity up to 10 days are being fulfilled.</p>
             <p>Our suppliers are global manufacturers of electronic components: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              printed circuit boards and
-              Service Devices components are used at the enterprises of the EU Railways
-              MinAtom, Special Medical Equipment. Among our clients are the largest manufacturers of lighting equipment
-              in Europe.</p>
+              printed circuit boards.
+            </p>
             <button type="button" class="btn about__btn">read more</button>
           </div>
         </div>
@@ -120,25 +121,27 @@
           <div class="feedback__image">
             <img src="img/feedback-plane.png" alt="paperplane">
           </div>
-          <form action="https://echo.htmlacademy.ru/" method="get" class="feedback__form form">
+          <form action="https://echo.htmlacademy.ru/" method="get" class="feedback__form form-feedback">
             <legend> Got any questions? Ask us!</legend>
             <p>We will consult you for free</p>
-            <div class="form__content">
-              <div class="form__field">
+            <div class="form-feedback__content">
+              <div class="form-feedback__field">
+                <label for="user-name" class="visually-hidden">Your name</label>
                 <input id="user-name" type="text" required placeholder="Your name">
               </div>
-              <div class="form__field">
+              <div class="form-feedback__field">
+                <label for="user-tel" class="visually-hidden">Your phone</label>
                 <input id="user-tel" type="number" required placeholder="Your phone number">
               </div>
-              <div class="form__field form__field--area">
+              <div class="form-feedback__field form__field--area">
                 <textarea id="question" placeholder="Type your question here."></textarea>
               </div>
             </div>
-            <div class="form__submit submit">
-              <button type="submit" class="submit__btn btn">Ask a question</button>
-              <div class="submit__agreement checkbox">
-                <input type="checkbox" name="" id="checkbox_1">
-                <label for="checkbox_1">I agree to data processing
+            <div class="form-feedback__submit">
+              <button type="submit" class="btn form-feedback__btn">Ask a question</button>
+              <div class="form-feedback__agreement checkbox">
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement">I agree to data processing
                   <div class="checkbox__icon">
                   </div>
                 </label>
@@ -151,52 +154,54 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__links">
-          <a class="header__logo logo">
-            <img src="img/logo.png" alt="Smart Device logo" width="215" height="50">
+          <a href="#home" class="footer__logo logo">
+            <img src="img/logo.png" alt="Smart Device logo" width="215" height="55">
           </a>
           <div class="footer__socials socials">
-            <a class="socials__item">
+            <a href="#" class="socials__item">
               <svg>
                 <use href="img/sprite/sprite.svg#pinterest-icon"></use>
               </svg>
             </a>
-            <a class="socials__item">
+            <a href="#" class="socials__item">
               <svg>
-                <use href="img/sprite/sprite.svg#pinterest-icon"></use>
+                <use href="img/sprite/sprite.svg#telegram-icon"></use>
               </svg>
             </a>
-            <a class="socials__item">
+            <a href="mailto:gmail@com" class="socials__item">
               <svg>
-                <use href="img/sprite/sprite.svg#pinterest-icon"></use>
+                <use href="img/sprite/sprite.svg#gmail-icon"></use>
               </svg>
             </a>
           </div>
         </div>
-        <div class="footer__navigation navigation">
+        <nav class="footer__navigation navigation">
           <p>Sections of the site</p>
-          <a href="#">About company</a>
-          <a href="#">Products</a>
-          <a href="#">Production of printed
-            boards</a>
-          <a href="#">PCB assembly</a>
-          <a href="#">Accessories</a>
-          <a href="#">Delivery</a>
-          <a href="#">Contacts</a>
-        </div>
+          <ul>
+            <li><a href="#about">About company</a></li>
+            <li><a href="#">Products</a></li>
+            <li>
+              <a href="#">Production of printed
+                boards</a>
+            </li>
+            <li><a href="#">PCB assembly</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
         <div class="footer__contacts">
           <p> Our office</p>
-          <a href="#">Poland, Wroclaw city, Padzerskiego 138a street</a>
-          <a href="" tel="13123123123">+(48)2651132784</a>
-          <a href="" tel="13123123123">+(48)5708412327</a>
-          <a href="" tel="13123123123">+(48)1592435903</a>
+          <a href="https://goo.gl/maps/fmjCwBvoRNWmDaDP7" target="_blank">Poland, Wroclaw, Padzerskiego 138a </a>
+          <a href="tel:09814123142">+(48)265-11327-84</a>
+          <a href="tel:09814123142">+(48)570-84123-27</a>
+          <a href="tel:09814123142">+(48)159-24359-03</a>
         </div>
       </div>
+    </footer>
   </div>
   </footer>
   </div>
-
-
-
 
 
 
