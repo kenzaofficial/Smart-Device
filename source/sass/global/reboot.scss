@@ -19,6 +19,11 @@ html {
   font-family: $ff-placeholder;
   color: $color-default-black;
 
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
