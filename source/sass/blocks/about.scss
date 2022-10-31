@@ -1,5 +1,5 @@
 .about {
-  padding-bottom: 115px;
+  padding-bottom: 100px;
 
   @include vp-1023 {
     padding-bottom: 40px;
@@ -59,10 +59,6 @@
     font-weight: 400;
     line-height: 51px;
 
-    @include vp-1023 {
-      margin-bottom: 5px;
-    }
-
     @include vp-767 {
       font-size: 28px;
       line-height: 39px;
@@ -72,13 +68,19 @@
   p {
     margin-top: 0;
   }
+
+  span {
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .about__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 35px;
   padding: 13px 30px;
   min-height: 45px;
   max-width: 185px;
@@ -88,6 +90,10 @@
   border: 1px solid $color-deepsky-blue;
   text-transform: uppercase;
   transition: .3s;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
 
   @include vp-767 {
     min-height: 35px;

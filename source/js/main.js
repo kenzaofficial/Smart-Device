@@ -1,14 +1,24 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { initAccordions } from './utils/init-accordion';
 
 // ---------------------------------
+const button = document.querySelector('#btnForMoreText');
+const moreText = document.querySelector('#moreText');
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
-
   iosVhFix();
+
+  button.addEventListener('click', function () {
+    moreText.classList.toggle('visually-hidden');
+    if (moreText.classList.contains('visually-hidden')) {
+      button.innerHTML = 'Подробнее';
+    } else {
+      button.innerHTML = 'Скрыть';
+    }
+  });
 
   // Modules
   // ---------------------------------
@@ -17,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initAccordions();
   });
 });
 

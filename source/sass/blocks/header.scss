@@ -23,6 +23,7 @@
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between
 }
 
 .header__logo {
@@ -36,14 +37,15 @@
 }
 
 .header__contacts {
-  margin: 0 auto;
   padding: 0 10px;
   display: flex;
+  max-width: 480px;
+  width: 100%;
   flex-wrap: wrap;
-  column-gap: 50px;
-  max-width: 100%;
+  column-gap: 95px;
 
   @include vp-1023 {
+    max-width: fit-content;
     margin-right: 20px;
     column-gap: 40px;
   }
@@ -85,8 +87,13 @@
 }
 
 .header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 50px;
   padding: 11px 15px;
+  max-width: 160px;
+  width: 100%;
   min-height: 40px;
   background-color: transparent;
   border: 1px solid $color-text-light;

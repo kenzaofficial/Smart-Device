@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/data-accordion";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -15,7 +16,7 @@
 @import "global/utils";
 @import "global/container";
 @import "global/checkbox";
-
+@import "global/container";
 // Blocks
 // ---------------------------------
 
@@ -28,6 +29,8 @@
 @import "blocks/services";
 @import "blocks/feedback";
 @import "blocks/footer";
+@import "blocks/accordion";
+
 
 
 // ---------------------------------
