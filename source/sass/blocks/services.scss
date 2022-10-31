@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding: 45px 0 75px;
+    padding: 40px 0 75px;
   }
 }
 
@@ -45,7 +45,7 @@
   }
 
   h5 {
-    margin-top: 20px;
+    margin-top: 15px;
     padding-right: 30px;
     max-width: 230px;
     font-size: 20px;
@@ -84,7 +84,7 @@
   }
 
   @include vp-767 {
-    padding: 20px 30px 45px;
+    padding: 10px 30px 45px;
   }
 
   &:hover {
