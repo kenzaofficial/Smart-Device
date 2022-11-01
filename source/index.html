@@ -43,7 +43,10 @@
           <div class="hero__content">
             <h2>printed boards</h2>
             <p>production and installation, supplying of components, blocks and modules</p>
-            <button class="btn hero__btn" type="button" data-open-modal="feedback">Get a free consultation</button>
+            <a href="#feedbacks" class="btn hero__btn">
+              <span>Get a free consultation</span>
+              <span>Free consultation</span>
+            </a>
           </div>
         </div>
       </section>
@@ -130,7 +133,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="feedbacks">
         <h2 class="visually-hidden">feedback</h2>
         <div class="feedback__container container">
           <div class="feedback__image">
@@ -143,14 +146,15 @@
               <div class="form-feedback__content">
                 <div class="form-feedback__field">
                   <label for="user-name" class="visually-hidden">Your name</label>
-                  <input id="user-name" type="text" required placeholder="Your name">
+                  <input id="user-name" type="text" name="user-name" required placeholder="Your name">
                 </div>
                 <div class="form-feedback__field">
                   <label for="user-tel" class="visually-hidden">Your phone</label>
                   <input id="user-tel" type="number" required placeholder="Your phone number">
                 </div>
                 <div class="form-feedback__field form-feedback__field--area">
-                  <textarea id="question" placeholder="Type your question here."></textarea>
+                  <label for="question" class="visually-hidden"></label>
+                  <textarea name="question" id="question" placeholder="Type your question here."></textarea>
                 </div>
               </div>
               <div class="form-feedback__submit">
@@ -230,25 +234,26 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <form action="https://echo.htmlacademy.ru/" method="get" class="feedback__form form-feedback">
+        <form action="https://echo.htmlacademy.ru/" method="post" class="feedback__form form-feedback">
           <fieldset>
             <legend> Got any questions? Ask us!</legend>
             <p>We will consult you for free without paying any money</p>
             <div class="form-feedback__content">
               <div class="form-feedback__field form-feedback__field--modal">
-                <label for="user-name" class="visually-hidden">Your name</label>
-                <input id="user-name" type="text" required placeholder="Your name">
+                <label for="modal-name" class="visually-hidden">Your name</label>
+                <input id="modal-name" type="text" name="modal-name" required placeholder="Your name">
               </div>
               <div class="form-feedback__field form-feedback__field--modal">
-                <label for="user-tel" class="visually-hidden">Your phone</label>
-                <input id="user-tel" type="number" required placeholder="Your phone number">
+                <label for="modal-tel" class="visually-hidden">Your phone</label>
+                <input name="modal-tel" id="modal-tel" type="number" required placeholder="Your phone number">
               </div>
               <div class="form-feedback__field form-feedback__field--modal">
-                <textarea id="question" placeholder="Type your question here."></textarea>
+                <label for="modal-question" class="visually-hidden"></label>
+                <textarea name="modal-question" id="modal-question" placeholder="Type your question here."></textarea>
               </div>
             </div>
             <div class="form-feedback__submit form-feedback__submit--modal">
-              <button type="submit" class="btn form-feedback__btn">Ask a question</button>
+              <button type="submit" class="btn form-feedback__btn">Sumbit</button>
               <div class="form-feedback__agreement checkbox">
                 <input type="checkbox" name="agreement-modal" id="agreement-modal">
                 <label for="agreement-modal">I agree to data processing

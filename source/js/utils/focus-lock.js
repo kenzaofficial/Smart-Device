@@ -9,7 +9,7 @@ const SELECTORS = [
   'object',
   'embed',
   '[contenteditable]',
-  '[tabindex]:not([tabindex^="-"])'
+  '[tabindex]:not([tabindex^="-"])',
 ];
 
 export class FocusLock {
@@ -18,7 +18,6 @@ export class FocusLock {
     this._focusableElements = null;
     this._endElement = null;
     this._selectors = SELECTORS;
-
     this._documentKeydownHandler = this._documentKeydownHandler.bind(this);
   }
 
@@ -35,17 +34,29 @@ export class FocusLock {
         this._focusableElements[0].focus();
         return;
       }
-      if (this._focusableElements.length > 1 && !activeElement.closest(this._lockedSelector)) {
+      if (
+        this._focusableElements.length > 1 &&
+        !activeElement.closest(this._lockedSelector)
+      ) {
         evt.preventDefault();
         this._focusableElements[0].focus();
         return;
       }
     }
-    if (evt.key === 'Tab' && !evt.shiftKey && activeElement === this._focusableElements[this._focusableElements.length - 1]) {
+    if (
+      evt.key === 'Tab' &&
+      !evt.shiftKey &&
+      activeElement ===
+        this._focusableElements[this._focusableElements.length - 1]
+    ) {
       evt.preventDefault();
       this._focusableElements[0].focus();
     }
-    if (evt.key === 'Tab' && evt.shiftKey && activeElement === this._focusableElements[0]) {
+    if (
+      evt.key === 'Tab' &&
+      evt.shiftKey &&
+      activeElement === this._focusableElements[0]
+    ) {
       evt.preventDefault();
       this._focusableElements[this._focusableElements.length - 1].focus();
     }
@@ -60,7 +71,8 @@ export class FocusLock {
     }
     this._focusableElements = lockedElement.querySelectorAll(this._selectors);
     this._endElement = document.activeElement;
-    const startElement = lockedElement.querySelector('[data-focus]') || this._focusableElements[0];
+    const startElement =
+      lockedElement.querySelector('[data-focus]') || this._focusableElements[0];
     if (this._endElement) {
       this._endElement.blur();
     }

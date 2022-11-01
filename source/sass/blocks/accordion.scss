@@ -1,5 +1,4 @@
 .accordion {
-
   &__element:last-child {
     margin-bottom: 0;
   }
@@ -7,7 +6,7 @@
   &__element {
     @include vp-767 {
       position: relative;
-      border-bottom: 1px solid #AFB8BE;
+      border-bottom: 1px solid #afb8be;
       padding-left: 25px;
 
       &::before,
@@ -16,7 +15,7 @@
         content: "";
         width: 15px;
         height: 1px;
-        background-color: #C4C4C4;
+        background-color: #c4c4c4;
         top: 25px;
         right: 25px;
         transition: 0.3s;
