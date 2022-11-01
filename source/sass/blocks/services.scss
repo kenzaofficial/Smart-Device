@@ -72,8 +72,7 @@
   width: 100%;
   min-height: 650px;
   color: $color-default-white;
-  background-color: $color-bg-darkblue;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url(../../img/background-desktop.jpg) no-repeat;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg") no-repeat;
   background-position: 0 0;
   background-size: cover;
 
@@ -88,7 +87,7 @@
   }
 
   &:hover {
-    background: linear-gradient(2deg, rgba(25, 322, 2, 0) 71.72%, rgba(125, 22, 36, 0) 100%), url(../../img/background-desktop.jpg);
+    background: linear-gradient(2deg, rgba(25, 322, 2, 0) 71.72%, rgba(125, 22, 36, 0) 100%), url("../../img/background-desktop.jpg");
     background-size: cover;
   }
 

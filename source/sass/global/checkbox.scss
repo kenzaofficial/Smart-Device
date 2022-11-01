@@ -29,7 +29,6 @@
 
   input:checked+label {
     .checkbox__icon {
-
       &::after {
         border-color: $color-default-white;
         opacity: 1;
@@ -48,7 +47,7 @@
     border: 1px solid $color-default-white;
     border-radius: 2px;
     z-index: 1;
-    transition: .3s;
+    transition: 0.3s;
 
     &::after {
       position: absolute;
@@ -57,8 +56,8 @@
       left: 15%;
       width: 9px;
       height: 5px;
-      border-left: 2px solid gray;
-      border-bottom: 2px solid gray;
+      border-left: 2px solid $color-alice;
+      border-bottom: 2px solid $color-alice;
       transform: rotate(-45deg);
       z-index: 2;
       transition: 0.3s;
