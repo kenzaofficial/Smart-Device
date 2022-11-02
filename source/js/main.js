@@ -1,6 +1,7 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import { initAccordions } from './utils/init-accordion';
+import { initPhoneMask } from './utils/phone-mask';
 
 // ---------------------------------
 const button = document.querySelector('#btnForMoreText');
@@ -8,8 +9,9 @@ const moreText = document.querySelector('#moreText');
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
-  // ---------------------------------
   iosVhFix();
+  initPhoneMask();
+  initAccordions();
 
   button.addEventListener('click', function () {
     moreText.classList.toggle('visually-hidden');
@@ -27,7 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    initAccordions();
   });
 });
 

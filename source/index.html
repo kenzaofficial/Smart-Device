@@ -20,7 +20,8 @@
         <a class="header__logo logo">
           <picture>
             <source media="(max-width:767px )" srcset="img/sprite/logo.svg">
-            <img src="img/logo.png" alt="Smart Device logo" width="215" height="55">
+            <source type="image/webp" srcset="img/logo.webp 1x, img/logo2x.webp 2x">
+            <img src="img/logo.png" alt="Smart Device logo" width="215" height="55" srcset="img/logo2x.png 2x">
           </picture>
         </a>
         <div class="header__contacts">
@@ -137,7 +138,11 @@
         <h2 class="visually-hidden">feedback</h2>
         <div class="feedback__container container">
           <div class="feedback__image">
-            <img src="img/feedback-plane.png" alt="paperplane">
+            <picture>
+              <source type="image/webp" srcset="img/feedback-plane.webp 1x, img/feedback-plane2x.webp 2x">
+              <img src="img/feedback-plane.png" alt="paperplane" width="510" height="210"
+                srcset="img/feedback-plane2x.png 2x">
+            </picture>
           </div>
           <form action="https://echo.htmlacademy.ru/" method="get" class="feedback__form form-feedback">
             <fieldset>
@@ -150,7 +155,7 @@
                 </div>
                 <div class="form-feedback__field">
                   <label for="user-tel" class="visually-hidden">Your phone</label>
-                  <input id="user-tel" type="number" required placeholder="Your phone number">
+                  <input id="user-tel" type="tel" required placeholder="Your phone number">
                 </div>
                 <div class="form-feedback__field form-feedback__field--area">
                   <label for="question" class="visually-hidden"></label>
@@ -177,7 +182,10 @@
         data-destroy="(max-width:767px)">
         <div class="footer__links">
           <a href="#home" class="footer__logo logo">
-            <img src="img/logo.png" alt="Smart Device logo" width="215" height="55">
+            <picture>
+              <source type="image/webp" srcset="img/logo.webp 1x, img/logo2x.webp 2x">
+              <img src="img/logo.png" alt="Smart Device logo" width="215" height="55" srcset="img/logo2x.png 2x">
+            </picture>
           </a>
           <div class="footer__socials socials">
             <a href="#" class="socials__item">
@@ -245,7 +253,7 @@
               </div>
               <div class="form-feedback__field form-feedback__field--modal">
                 <label for="modal-tel" class="visually-hidden">Your phone</label>
-                <input name="modal-tel" id="modal-tel" type="number" required placeholder="Your phone number">
+                <input name="modal-tel" id="modal-tel" type="tel" required placeholder="Your phone number">
               </div>
               <div class="form-feedback__field form-feedback__field--modal">
                 <label for="modal-question" class="visually-hidden"></label>
