@@ -2,8 +2,14 @@
   margin-top: -20px;
   padding-top: 205px;
   padding-bottom: 280px;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg") center / cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    url("../../img/background-desktop.jpg") center / cover no-repeat;
   color: $color-text-light;
+
+  @include retina {
+    background: url("../../img/background-desktop2x.jpg");
+  }
 
   @include vp-1023 {
     padding-top: 100px;
@@ -15,6 +21,8 @@
     padding-bottom: 190px;
   }
 }
+
+
 
 .hero__container {
   display: flex;
