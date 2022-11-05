@@ -53,8 +53,8 @@
       </section>
       <section class="advantages">
         <div class="advantages__container container">
-          <div class="advantages__content">
-            <div class="advantages__item item-advantage">
+          <div class="advantages__list">
+            <li class="advantages__item item-advantage">
               <svg>
                 <use href="img/sprite/sprite.svg#stopwatch"></use>
               </svg>
@@ -62,8 +62,8 @@
               <p>an improved logistics system allows us to calculate the cost, produce and deliver orders of boards and
                 components in the
                 shortest possible time</p>
-            </div>
-            <div class="advantages__item item-advantage">
+            </li>
+            <li class="advantages__item item-advantage">
               <svg>
                 <use href="img/sprite/sprite.svg#hired"></use>
               </svg>
@@ -72,21 +72,21 @@
                 such companies
                 ensures the good quality of our products.
               </p>
-            </div>
-            <div class="advantages__item item-advantage">
+            </li>
+            <li class="advantages__item item-advantage">
               <svg>
                 <use href="img/sprite/sprite.svg#detective"></use>
               </svg>
               <h4>Complete privacy</h4>
               <p>At the request of the client, we provide complete confidentiality.</p>
-            </div>
-            <div class="advantages__item item-advantage">
+            </li>
+            <li class="advantages__item item-advantage">
               <svg>
                 <use href="img/sprite/sprite.svg#tag"></use>
               </svg>
               <h4>Cost personalization</h4>
               <p>We select a specific factory, suppliers, type of delivery in order to set the price that suits you.</p>
-            </div>
+            </li>
           </div>
         </div>
       </section>
@@ -155,7 +155,7 @@
                 </div>
                 <div class="form-feedback__field">
                   <label for="user-tel" class="visually-hidden">Your phone</label>
-                  <input id="user-tel" type="tel" required placeholder="Your phone number">
+                  <input id="user-tel" type="tel" name="user-tel" required placeholder="Your phone number">
                 </div>
                 <div class="form-feedback__field form-feedback__field--area">
                   <label for="question" class="visually-hidden"></label>
@@ -165,7 +165,7 @@
               <div class="form-feedback__submit">
                 <button type="submit" class="btn form-feedback__btn">Ask a question</button>
                 <div class="form-feedback__agreement checkbox">
-                  <input type="checkbox" name="agreement" id="agreement">
+                  <input type="checkbox" name="agreement" id="agreement" required>
                   <label for="agreement">I agree to data processing
                     <span class="checkbox__icon">
                     </span>
@@ -263,7 +263,7 @@
             <div class="form-feedback__submit form-feedback__submit--modal">
               <button type="submit" class="btn form-feedback__btn">Sumbit</button>
               <div class="form-feedback__agreement checkbox">
-                <input type="checkbox" name="agreement-modal" id="agreement-modal">
+                <input type="checkbox" name="agreement-modal" id="agreement-modal" required>
                 <label for="agreement-modal">I agree to data processing
                   <span class="checkbox__icon">
                   </span>

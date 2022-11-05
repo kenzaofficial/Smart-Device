@@ -12,7 +12,7 @@
   }
 }
 
-.advantages__content {
+.advantages__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -22,7 +22,7 @@
   }
 }
 
-.item-advantage {
+.advantages__item {
   padding: 40px 45px 35px;
   max-width: 595px;
   min-height: 300px;
